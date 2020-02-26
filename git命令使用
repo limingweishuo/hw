@@ -1,0 +1,26 @@
+1、删除分支
+    git branch -d 分支名1  分支名2  分支名3    |----|    删除多个分支1、2、3
+
+2、下载特定分支git clone 或 git lfs clone
+    git clone 下载地址.git    |----|    下载地址整条分支代码
+    git clone -b 分支名称 --single-branch 下载地址.git    |----|    下载地址中单独某条分支，记得带参数--single-branch 
+
+    git clone --depth=number 下载地址.git    |----|    下载地址中最近number次提交的整条分支代码
+    git clone --depth number 下载地址.git    |----|    下载地址中最近number次提交的整条分支代码
+
+3、切换到某个文件夹
+    cd ProjectPath    |----|    cd /Downloads/G25_platform_sdk
+
+4、查看项目分支(包括本地和远程)
+    git branch -a 
+
+5、创建文件夹
+    mkdir 文件名    |----|    创建文件夹，注意不能是  file1/file2 多级目录的形式，只能是单层
+    cd 文件名    |----|    进入文件夹
+    rm -r 文件名    |----|    删除文件夹，必须带上参数 -r ，否则不能使用
+
+2020-2-26
+----本地创建git仓库，实现从GitHub下载和远程提交到GitHub
+        1、mkdir 文件名    |----|    创建文件夹
+             git init    |----|    创建.git文件夹存放  
+        2、
