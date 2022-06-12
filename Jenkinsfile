@@ -144,10 +144,6 @@ pipeline {
                 // groovy 脚本
                 sh 'echo hello'
                 echo 'Hello World'
-				steps {
-					def log = load "load.groovy"
-					log.echoTest()
-				}
                 script {
 					def log = load "load.groovy"
 					log.echoTest()

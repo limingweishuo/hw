@@ -1,4 +1,4 @@
-void echoTest() {
+def echoTest() {
     echo "test"
 }
 
