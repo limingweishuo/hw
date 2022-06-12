@@ -141,14 +141,14 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                // groovy 脚本
+                //groovy 脚本
                 sh 'echo hello'
                 echo 'Hello World'
                 script {
 					def log = load "load.groovy"
 					log.echoTest()
 					log.echoTest01()
-                    // groovy 脚本
+                    //groovy 脚本
                     def browsers = ['chrome', 'firefox']
                     for (int i = 0; i < browsers.size(); ++i) {
                         echo "Testing the ${browsers[i]} browser"
@@ -158,3 +158,5 @@ pipeline {
         }
     }
 }
+
+//
