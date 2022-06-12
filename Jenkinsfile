@@ -94,7 +94,7 @@ pipeline {
 				// 下载代码，其他的依赖等
 				// 安装工具
 				// 做执行检查
-				sh 'pwd'
+				sh 'pwd&&ls'
                 sh 'echo Pre stage ...' 
             }
         }
