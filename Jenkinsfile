@@ -85,6 +85,14 @@ pipeline {
     agent any 
 
     stages {
+		stage('Pre'){
+            steps { 
+				// 下载代码，其他的依赖等
+				// 安装工具
+				// 做执行检查
+                sh 'echo Pre stage ...' 
+            }
+        }
         stage('Build') {
             parallel{
                 stage('Build:Module1') { 
@@ -104,12 +112,16 @@ pipeline {
                 }
             }
         }
-        stage('Test'){
+        stage('Post or Test'){
+			// 也可以是Test，比如说网站部署。这里可以做基础功能测试，接口测试，性能测试，安全测试等
+			// 华为项目中这一步是打包，各种版本的包，并上传
             steps {
-                sh 'echo Test stage ...' 
+                sh 'echo Post or Test stage ...' 
             }
         }
-        stage('Deploy') {
+        stage('Deploy') { 
+			// 实在不行Test可以放在Deploy去做 | 因为代码可能只有在硬件上烧刻才能部署
+			// 这里的test可能只是拿一些旧用例跑一下
             steps {
                 sh 'echo Deploy stage ...' 
             }
