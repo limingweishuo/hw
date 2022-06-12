@@ -103,16 +103,16 @@
             // parallel{
                 // stage('Build:Module1') { 
                     // steps { 
-						def log
-						log = load "${WORKSPACE}/load.groovy"
+						// def log
+						// log = load "${WORKSPACE}/load.groovy"
                         // sh 'echo Build Module1 stage ...'
-						unitTestModule.runUnitTest()						
+						// unitTestModule.runUnitTest()						
                     // }
                 // }
                 // stage('Build:Module2') { 
                     // steps { 
                         // sh 'echo Build Module2 stage ...' 
-						unitTestModule.exportReporter()
+						// unitTestModule.exportReporter()
                     // }
                 // }
                 // stage('Build:Module3') { 
