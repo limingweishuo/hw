@@ -138,6 +138,11 @@
 // jenkins使用 groovy
 pipeline {
     agent any
+	
+    environment {
+        FOO = "bar"
+    }
+	
     stages {
         stage('Example') {
             steps {
@@ -154,6 +159,8 @@ pipeline {
                         echo "Testing the ${browsers[i]} browser"
                     }
                 }
+				
+				echo "${env.FOO}"
             }
         }
     }
