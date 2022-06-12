@@ -86,7 +86,7 @@ pipeline {
     agent any 
 	
 	// 可以设置parameters 或 enviroment 
-	def unitTestModule = load "load.groovy"
+	// def unitTestModule = load "load.groovy"
 	
     stages {
 		stage('Pre'){
@@ -94,6 +94,7 @@ pipeline {
 				// 下载代码，其他的依赖等
 				// 安装工具
 				// 做执行检查
+				pwd
                 sh 'echo Pre stage ...' 
             }
         }
