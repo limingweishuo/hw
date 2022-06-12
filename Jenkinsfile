@@ -86,7 +86,7 @@ pipeline {
     agent any 
 	
 	// 可以设置parameters 或 enviroment 
-	def unitTestModule = load('load.groovy')
+	def unitTestModule = load "load.groovy"
 	
     stages {
 		stage('Pre'){
