@@ -147,6 +147,7 @@ pipeline {
                 script {
 					def log = load "load.groovy"
 					log.echoTest()
+					log.echoTest01()
                     // groovy 脚本
                     def browsers = ['chrome', 'firefox']
                     for (int i = 0; i < browsers.size(); ++i) {

@@ -2,4 +2,8 @@ def echoTest() {
     echo "test"
 }
 
-// return this
+def echoTest01() {
+    echo "test01"
+}
+
+return this
