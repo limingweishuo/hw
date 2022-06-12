@@ -159,7 +159,7 @@ pipeline {
                         echo "Testing the ${browsers[i]} browser"
                     }
                 }
-				
+				echo "${gitBranch}"
 				echo "${env.FOO}"
             }
         }
