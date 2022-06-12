@@ -161,6 +161,14 @@ pipeline {
                 }
 				echo "${gitBranch}"
 				echo "${env.FOO}"
+				
+				// sh多行脚本 ''' '''
+				sh """
+					echo Hello World
+					ls
+					printenv
+					pwd
+				"""
             }
         }
     }
