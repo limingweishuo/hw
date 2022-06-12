@@ -102,6 +102,7 @@ pipeline {
             parallel{
                 stage('Build:Module1') { 
                     steps { 
+						def log
 						log = load "${WORKSPACE}/load.groovy"
                         sh 'echo Build Module1 stage ...'
 						// unitTestModule.runUnitTest()						
