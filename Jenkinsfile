@@ -82,8 +82,12 @@
   
 // 并行任务
 pipeline {
+	// 可以指定容器 或 节点
     agent any 
-
+	
+	// 可以设置parameters 或 enviroment 
+	def unitTestModule = load('load.groovy')
+	
     stages {
 		stage('Pre'){
             steps { 
@@ -97,12 +101,14 @@ pipeline {
             parallel{
                 stage('Build:Module1') { 
                     steps { 
-                        sh 'echo Build Module1 stage ...' 
+                        sh 'echo Build Module1 stage ...'
+						unitTestModule.runUnitTest()						
                     }
                 }
                 stage('Build:Module2') { 
                     steps { 
                         sh 'echo Build Module2 stage ...' 
+						unitTestModule.exportReporter()
                     }
                 }
                 stage('Build:Module3') { 
