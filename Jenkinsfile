@@ -151,6 +151,7 @@ pipeline {
                 echo 'Hello World'
                 script {
 					def log = load "load.groovy"
+					log.runUnitTest()
                     // groovy 脚本
                     def browsers = ['chrome', 'firefox']
                     for (int i = 0; i < browsers.size(); ++i) {
