@@ -87,7 +87,6 @@
     // agent any 
 	
 	// 可以设置parameters 或 enviroment 
-	// def unitTestModule = load "load.groovy"
 	
     // stages {
 		// stage('Pre'){
@@ -103,16 +102,12 @@
             // parallel{
                 // stage('Build:Module1') { 
                     // steps { 
-						// def log
-						// log = load "${WORKSPACE}/load.groovy"
-                        // sh 'echo Build Module1 stage ...'
-						// unitTestModule.runUnitTest()						
+                        // sh 'echo Build Module1 stage ...'					
                     // }
                 // }
                 // stage('Build:Module2') { 
                     // steps { 
                         // sh 'echo Build Module2 stage ...' 
-						// unitTestModule.exportReporter()
                     // }
                 // }
                 // stage('Build:Module3') { 
@@ -151,7 +146,7 @@ pipeline {
                 echo 'Hello World'
                 script {
 					def log = load "load.groovy"
-					log.runUnitTest()
+					log.echoTest()
                     // groovy 脚本
                     def browsers = ['chrome', 'firefox']
                     for (int i = 0; i < browsers.size(); ++i) {

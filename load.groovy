@@ -1,7 +1,5 @@
-def runUnitTest() {
-  sh 'echo runUnitTest' 
+void echoTest() {
+    echo "test"
 }
 
-def exportReporter() {
-  sh 'echo exportReporter' 
-}
+return this
